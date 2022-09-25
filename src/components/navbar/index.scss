@@ -1,0 +1,64 @@
+@import "../../styles/properties";
+
+.navigation {
+    position: fixed;
+    top: 0;
+    padding-top: 0.75em;
+    z-index: 2;
+    background-color: $background-white;
+    width: 100%;
+    border-bottom: 0.1em solid $background-black;
+
+    .container {
+        padding: 1em 0 0.8 0;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        margin: 0 10em;
+
+        .logo {
+            padding: 0 1em;
+            width: 100px;
+            height: 40px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .search {
+            border: 1px solid $border-color-grey;
+            border-radius: 5px;
+            background-color: $background-grey;
+            margin-bottom: 10px;
+            min-width: 265px;
+            height: 33px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .searchIcon {
+                width: 13px;
+                margin-right: 0.3em;  
+            }
+
+            .searchText {
+                color: $font-color-secondary;
+                font-size: 0.95em;
+                font-weight: 200;
+                margin-right: 12em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .logo {
+        margin-left: -10em;
+    }
+
+    
+
+    .search {
+        display: none !important;
+    }
+}
