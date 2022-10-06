@@ -1,9 +1,12 @@
 import React from 'react'
 import "./index.scss"
-import ProfileIcon from '../profile-icon'
-import users from '../../data/users'
+import ProfileIcon from '../../components/profile-icon'
+import { useSelector, useDispatch } from 'react-redux'
+
 
 function Profile(props) {
+  const users = useSelector(state => state.usersReducer.users)
+
   const {
     username,
     caption,
@@ -17,7 +20,7 @@ function Profile(props) {
 
   let accountName = username
    ? username 
-   : users[Math.floor(Math.random() * users.length)].username
+   : (users.length > 0 ? users[Math.floor(Math.random() * users.length)].username : "userName") 
 
   return (
     <div className='profile'>

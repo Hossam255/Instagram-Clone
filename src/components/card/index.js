@@ -1,6 +1,6 @@
 import React from 'react'
 import "./index.scss"
-import Profile from '../profile'
+import Profile from '../../containers/profile'
 import {ReactComponent as CardButton} from "../../images/cardButton.svg"
 import CardMenu from '../card-menu'
 import Comment from '../comment'

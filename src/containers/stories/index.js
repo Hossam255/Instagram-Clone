@@ -1,9 +1,12 @@
 import React from 'react'
 import "./index.scss"
-import Story from '../story'
-import users from '../../data/users'
+import Story from '../../components/story'
+import { useSelector, useDispatch } from 'react-redux'
+
 
 function Stories() {
+  const users = useSelector(state => state.usersReducer.users)
+
   return (
     <div className='stories'>
         <div className="scroll" >

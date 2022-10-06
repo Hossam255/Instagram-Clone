@@ -1,7 +1,7 @@
 import Navigation from './components/navbar';
 import React, {useEffect} from 'react'
 import './styles/App.scss';
-import Cards from './components/cards';
+import Cards from './containers/cards';
 import Sidebar from './components/sidebar';
 
 function App() {

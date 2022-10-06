@@ -1,6 +1,6 @@
 import React from 'react'
 import "./index.scss"
-import Profile from '../profile'
+import Profile from '../../containers/profile'
 
 function Suggestions() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./index.scss"
-import Profile from "../profile"
+import Profile from "../../containers/profile"
 import Suggestions from "../suggestions"
 import Footer from "../sidebar-footer"
 import image from "../../images/pic1.jpg"
