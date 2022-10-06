@@ -14,7 +14,7 @@ function Cards() {
   useEffect(()=> {
     const callCards = async ()=> {
       const cards = await fetchCards()
-      dispatch((updateCards(cards)))
+      dispatch(updateCards(cards))
     }
     callCards()
   },[])
