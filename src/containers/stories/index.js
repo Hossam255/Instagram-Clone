@@ -2,8 +2,7 @@ import React, { useEffect } from 'react'
 import "./index.scss"
 import Story from '../../components/story'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchUsers } from "../../api/userService"
-import {updateUsers} from '../../redux/action/action'
+import { UPDATE_USERS_SAGA} from '../../redux/action/action'
 
 
 function Stories() {
@@ -11,11 +10,7 @@ function Stories() {
   const dispatch = useDispatch()
 
   useEffect(()=> {
-    const callUsers  = async ()=> {
-      const users = await fetchUsers()
-      dispatch(updateUsers(users))
-    }
-    callUsers()
+      dispatch({type:UPDATE_USERS_SAGA})
   },[])
   return (
     <div className='stories'>
